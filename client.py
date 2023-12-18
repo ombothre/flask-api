@@ -1,9 +1,15 @@
 import requests
 
-def send(x):
+def send(gender, age, sal):
 
     # Define input data for prediction
-    input_data = {'input': x}  # Example input
+    input_data = {
+                "input":{
+                    "gender": gender,
+                    "age": age,
+                    "salary": sal
+                }
+             }  # Example input
 
     # Make a POST request to the API
     response = requests.post('http://127.0.0.1:5000/predict', json=input_data) #add your url
@@ -24,7 +30,7 @@ sal = int(input("Enter salary : "))
 
 x = [gender,age,sal]
 
-y = send(x)
+y = send(gender, age, sal)
 
 if y == 1:
     print("User will not buy from you")

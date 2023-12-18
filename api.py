@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request
 import joblib,numpy as np
 
 app = Flask(__name__)
@@ -17,8 +17,8 @@ def home():
 def predict():
     data = request.get_json(force=True)
 
-    input = data['input']
-    x = [input['gender'], input['age'], input['salary']]
+    x = data['input']
+
     #preprocessing on predicting data
 
     x[0] = le.transform([x[0]])
