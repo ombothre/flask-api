@@ -18,22 +18,25 @@ Ensure you have the following dependencies installed:
 
 Install the required dependencies using:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ## Usage
 
 - **Run `api.py`** to start the Flask API.
 - Use **`client.py`** to input user data for prediction.
-- 
-python client.py
+  
+`python client.py`
 
 ## Custom Model Creation
-Modify model.py to create and train your custom machine learning models using different datasets or algorithms. Adjust preprocessing steps, model training, and serialization as needed.
+
+Modify model.py to create and train your custom machine-learning models using different datasets or algorithms. Adjust preprocessing steps, model training, and serialization as needed.
 
 ## Future Scope
+
 To host the API in a production environment, consider deploying it to a hosting service or a cloud platform. Ensure security measures, input validation, and scalability for real-world usage.
 
 ## Additional Notes
--Data File: The provided CSV file Social_Network_Ads.csv is used for demonstration purposes. Replace it with your dataset for training custom models.
--Endpoint: The API endpoint for predictions is /predict. Modify client.py if the API is hosted elsewhere.
-Security: Sanitize user inputs and implement error handling for robustness.
+
+- Data File: The provided CSV file Social_Network_Ads.csv is used for demonstration purposes. Replace it with your dataset for training custom models.
+- Endpoint: The API endpoint for predictions is /predict. Modify client.py if the API is hosted elsewhere.
+- Security: Sanitize user inputs and implement error handling for robustness.
