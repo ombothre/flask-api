@@ -1,24 +1,24 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import joblib,numpy as np
 
 app = Flask(__name__)
 
 # Load the trained model
 
-model = joblib.load('models/model.pkl')
-le = joblib.load('models/label.pkl')
-std = joblib.load('models/std.pkl')
+model = joblib.load('static/model.pkl')
+le = joblib.load('static/label.pkl')
+std = joblib.load('static/std.pkl')
 
 @app.route('/')
 def home():
-    return "Api on /predict"
+    return render_template('index.html')
     
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json(force=True)
 
-    x = data['input']
-
+    input = data['input']
+    x = [input['gender'], input['age'], input['salary']]
     #preprocessing on predicting data
 
     x[0] = le.transform([x[0]])

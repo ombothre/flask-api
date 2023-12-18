@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask API</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles for the dark theme */
+    body {
+      background-color: #333;
+      color: #fff;
+      padding: 20px; /* Adding some padding for readability */
+    }
+    .navbar-dark .navbar-brand {
+      color: #fff;
+    }
+    .navbar-dark .navbar-brand:hover {
+      color: #fff;
+    }
+    .api-text {
+      margin-top: 30px; /* Adjust margin for better spacing */
+    }
+    pre{
+        color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">SVM API</a>
+</nav>
+
+<div class="container">
+  <div class="api-text">
+    <p>This Flask API is designed for Delta Corp to predict whether a new user will buy their items or not based on their gender, age, and salary.</p>
+    <p>To make a prediction, send a POST request to the route <code>/predict</code> with the following JSON body:</p>
+    <pre>
+{
+  "input": {
+    "gender": "Male",
+    "age": 32,
+    "salary": 40000
+  }
+}
+    </pre>
+    <p>You can use the <code>api-test.py</code> script from <a href="https://github.com/sankari-hacker/host-flask-api" target="_blank">this repository</a> or utilize services like Postman to test the API.</p>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
