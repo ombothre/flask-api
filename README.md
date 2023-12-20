@@ -1,4 +1,4 @@
-# Delta Company Product Purchase Prediction
+# SVC Flask local API
 
 This Python project utilizes a Flask API employing an SVM model to predict whether a user will purchase a product offered by Delta Company. The prediction is based on the user's input of gender (Male/Female), age (int), and salary (int), processed through `client.py`, sent as a POST request to the API (`api.py`), where the trained models are loaded to generate predictions.
 
